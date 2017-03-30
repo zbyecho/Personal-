@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    html,body{
+        height: 100%;
+         font-family: Arial,HeliosExtThin,"苹方";
+        overflow: hidden;
+    }
+    .box{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        width:400px;
+        height: 300px;
+        border: 1px solid #cccccc;
+        margin-left: -200px;
+        margin-top: -150px;
+        border-radius: 12px;
+    }
+    .top{
+        width:100%;
+        height: 80px;
+        /*background: #3496d8;*/
+        font-size: 20px;
+        font-weight: bold;
+        color: #FFFFFF;
+        text-align: center;
+        line-height:80px;
+        border-bottom: 1px solid #cccccc;
+    }
+    .bottom{
+        width:100%;
+        height:220px;
+        text-align: center;
+        line-height:220px;
+        font-size: 20px;
+        color: #FFFFFF;
+    }
+    span{
+        color: red;
+        font-size: 24px;
+    }
+    .back{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+        background: url(./img/time2.jpg) ;
+        /*color: transparent;*/
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: none;
+    }
+</style>
+<body>
+<div class="back"></div>
+    <div class="box">
+        <div class="top">提交成功！</div>
+        <div class="bottom"><span>3</span>s秒后返回首页.</div>
+    </div>
+</body>
+</html>
+<script src="js/jquery.min.js" ></script>
+<script>
+    var top=$('.top');
+    var spans=$('.bottom span');
+    var num=3;
+    var t=setInterval(function () {
+        num--;
+        if(num<=0){
+           clearInterval(t)
+            location.href="index.html";
+        }else{
+            spans.html(num);
+        }
+    },1000)
+
+</script>
