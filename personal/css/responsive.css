@@ -1,7 +1,7 @@
 @media screen and (max-width: 1024px) {
  #header .header-content {
  width: 90%;
- padding: 40px 0;
+ /*padding: 40px 0;*/
 }
  #header.fixed a {
  color: #353535;
